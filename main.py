@@ -73,7 +73,7 @@ def main():
         sick_vocab_file = os.path.join(args.data, 'sick.vocab')
         utils.build_vocab(token_files, sick_vocab_file)
 
-    # get vocab object from vocab file previously written
+    # get vocab object from vocab file previously written, create dictionary from list of unique words
     vocab = Vocab(filename=sick_vocab_file,
                   data=[Constants.PAD_WORD, Constants.UNK_WORD,
                         Constants.BOS_WORD, Constants.EOS_WORD])
